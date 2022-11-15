@@ -29,4 +29,4 @@ async def predicting_endpoint(predict_inputs:Predict_Inputs):
     df = pd.DataFrame([predict_inputs.dict().values()], columns=predict_inputs.dict().keys())
     predicted_result = model.predict(df)
     output_result = json.dumps(predicted_result.tolist())
-    return {"hello":output_result}
+    return {"Prediction":output_result}
